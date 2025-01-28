@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb); /* Gradient Background */
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+#main {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+#nav {
+    background: #3b5998;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+#nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#nav a:hover {
+    color: #ffdd59;
+}
+
+#nav img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+/* Form Section */
+#form {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
+    min-width: 50%;
+}
+
+#form label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+#form input[type="text"],
+#form textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#form input[type="text"]:focus,
+#form textarea:focus {
+    border-color: #3b5998;
+    outline: none;
+}
+
+#form button {
+    display: inline-block;
+    background: #3b5998;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    margin: 0 auto;
+}
+
+#form button:hover {
+    background: #08276b;
+}
+
+#form textarea {
+    height: 80px;
+  }
+
+#form input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+/* Task Section */
+#tasks_container {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center all children horizontally */
+    justify-content: center; /* Center all children vertically */
+    padding: 20px;
+    width: 100%;
+}
+
+#tasks {
+    padding: 20px;
+    margin-top: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto new lines if needed */
+    gap: 15px;
+    justify-content: center;
+    width: 100vw;
+}
+
+.tasks {
+    flex: 1 1 30%;
+    max-width: 30%;
+    background: #f1f1f1;
+    margin: 10px 0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    /* align-items: center; */
+    box-sizing: border-box;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, max-width 0.2s ease;
+}
+.tasks:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    max-width: 31%;
+}
+
+@media screen and (max-width: 768px) {
+    /* On smaller screens, set tasks to take full width */
+    #tasks {
+        flex-direction: column; /* Stack tasks vertically */
+        align-items: center; /* Center tasks */
+        justify-content: center; /* Center tasks */
+        gap: 10px;
+        max-width: 100%;
+        width: 100%;
+    }
+    .tasks {
+        flex: 1 1 auto; /* Take up full width */
+        max-width: 90%; /* Remove width restriction */
+        width: 90%; /* Take up full width */
+        margin: 0 0 15px 0; /* Adjust margin for vertical stacking */
+    }
+    .tasks:hover {
+        width: 100%; /* Take up full width */
+        max-width: 100%;
+    }
+}
+
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+
+
+.tasks h1 {
+    text-align: center;
+    color: #888;
+}
+
+.tasks h3 {
+    color: #071f54;
+    margin-bottom: 2px;
+    font-size: 25px;
+    white-space: nowrap; /* Prevent text from wrapping to next line */
+    overflow: hidden; /* Hide the overflow text */
+    text-overflow: ellipsis; /* Add "..." at the end of the text */
+    max-width: 100%; /* Ensure the text takes up all available space */
+    display: block;
+    text-align: left;
+}
+
+.tasks h6 {
+    color: #838186bd;
+    font-size: 0.7rem;
+    font-style: italic;
+    align-self: flex-end;
+}
+
+.tasks p {
+    color: #7115b8bd;
+    font-size: 0.9rem;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide the overflow text */
+    text-overflow: ellipsis; /* Add "..." at the end of the text */
+    max-width: 100%; /* Ensure the text takes up all available space */
+    display: block;
+}
+
+.tasks a {
+    color: #adaeb0;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.tasks a:hover {
+    color: #683ad3;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav img {
+        margin-top: 10px;
+    }
+
+    #form input[type="text"],
+    #form textarea {
+        font-size: 0.9rem;
+    }
+}
+
+
+.task-actions {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align links to the right */
+    gap: 10px; /* Add small spacing between the links */
+    align-items: center; /* Vertically align links in the center */
+    margin-top: 10px; /* Add spacing above the links */
+    transition: color 0.3s ease;
+  }
+  

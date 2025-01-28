@@ -1,0 +1,151 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #a1c4fd, #c2e9fb); /* Gradient Background */
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+#main {
+    max-width: 1200px;
+    margin: 30px auto;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+#nav {
+    background: #364e82;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+#nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#nav a:hover {
+    color: #00008c;
+}
+
+#nav img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+/* Task Section */
+#task_container {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center all children horizontally */
+    justify-content: center; /* Center all children vertically */
+    padding: 20px;
+    width: 100%;
+}
+
+#task {
+    padding: 20px;
+    margin-top: 20px;
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap onto new lines if needed */
+    gap: 15px;
+    justify-content: flex-start;
+    width: 100%;
+    position: relative; /* Allow positioning of the date */
+}
+
+#task h1 {
+    text-align: center;
+    color: #888;
+}
+
+#task h2 {
+    color: #071f54;
+    font-size: 25px;
+    font-weight: bold;
+    white-space: normal; /* Allow text to wrap */
+    max-width: 100%;
+}
+
+#task p {
+    color: #4c256a;
+    font-size: 0.9rem;
+    margin: 0 0 10px 0;
+    font-size: 15px;
+    white-space: normal; /* Allow text to wrap */
+    max-width: 100%;
+}
+
+#task h6 {
+    color: #838186bd;
+    font-size: 0.9rem;
+    position: absolute; /* Position the date in the top-right corner */
+    top: 0;
+    right: 0;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: right;
+    font-style: italic;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #nav img {
+        margin-top: 10px;
+    }
+
+    #task h2 {
+        font-size: 20px; /* Adjust the title font size for small screens */
+    }
+
+    #task p {
+        font-size: 14px; /* Adjust content font size for small screens */
+    }
+
+    #task h6 {
+        font-size: 0.8rem; /* Adjust the date font size */
+    }
+}
+
+
+/* Back Button Styling */
+#back {
+    background-color: #3865c7; /* Same color as the nav bar */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#back:hover {
+    background-color: #082b76; /* Hover effect */
+}

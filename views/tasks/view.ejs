@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <script src="/javascripts/user_script.js"></script>
+    <link rel="stylesheet" href="/stylesheets/view_task_style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div id="main">
+        <div id="nav">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+            <a href="/logout">Log Out</a>
+            <img src="<%= user.image %>" alt="Profile Picture" id="profile_pic">
+        </div>
+        <div id="task_container">
+            <div id="task">
+                <h2><%= task.title %></h2>
+                <p><%= task.content %></p>
+                <h6><%= task.date %></h6>
+            </div>   
+            <a href="/user" id="back">Back</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

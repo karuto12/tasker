@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <link rel="stylesheet" href="/stylesheets/index_style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div>
+        <div id="nav">
+            <a href="/">Home</a>
+            <a href="/create">Create User</a>
+            <a href="/view">View Users</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div id="prompt">
+            <form action="/update" method="POST">
+                <input type="hidden" value="<%= user._id %>" name="_id">
+                <label for="name">Name:</label>
+                <input type="text" value="<%= user.name %>" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" value="<%= user.email %>" id="email" name="email" required>
+
+                <label for="image">Image:</label>
+                <input type="text" value="<%= user.image %>" id="image" name="image" required oninput="updateImagePreview()">
+                
+                <!-- Image Preview Section -->
+                <div id="preview-container">
+                    <img id="preview" src="" alt="Image Preview">
+                </div>
+
+                <button type="submit">Update</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/javascripts/edit_script.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>

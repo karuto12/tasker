@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <link rel="stylesheet" href="/stylesheets/register_style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div class="">
+        <div id="nav">
+            <a href="/">Home</a>
+            <a href="/register">Sign Up</a>
+            <a href="/login">Log In</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div id="prompt">
+            <form action="/register" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="uname" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="image">Image:</label>
+                <input value="https://imgs.search.brave.com/0k8SHtyAN5wyBnnpT3uKzQD9avNsw4ktkaAZXB7gerU/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzg0LzRl/LzMzLzg0NGUzM2Y4/MTNkNjkzOWM0YmVi/NjRjMTEzZjhlOGI0/LmpwZw" type="text" id="image" name="image" required oninput="updateImagePreview()">
+                
+                <!-- Image Preview Section -->
+                <div id="preview-container">
+                    <img id="preview" src="" alt="Image Preview">
+                </div>
+
+                <button type="submit" id="signup">Sign Up</button>
+            </form>
+        </div>
+        <div id="warning-box">
+            <%= warning || '' %>
+        </div>
+    </div>
+
+    <script src="/javascripts/register_script.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>

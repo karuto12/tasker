@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview</title>
+    <link rel="stylesheet" href="/stylesheets/login_style.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <div>
+        <div id="nav">
+            <a href="/">Home</a>
+            <a href="/register">Sign Up</a>
+            <a href="/login">Log In</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div id="prompt">
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="uname" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                
+                <button type="submit">Log In</button>
+            </form>
+        </div>
+        <div id="warning-box">
+            <%= warning || '' %>
+        </div>
+    </div>
+
+    <script src="/javascripts/login_script.js"></script>
+</body>
+</html>
